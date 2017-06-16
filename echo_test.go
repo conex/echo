@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/omeid/conex"
-	"github.com/omeid/conex/echo"
+	"github.com/conex/echo"
 	echolib "github.com/omeid/echo"
 )
 
