@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/omeid/conex"
 	"github.com/conex/echo"
+	"github.com/omeid/conex"
 	echolib "github.com/omeid/echo"
 )
 
