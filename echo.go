@@ -39,7 +39,7 @@ func Box(t testing.TB, reverse bool) (echo.Echo, conex.Container) {
 		Expose: []string{Port},
 	})
 
-	t.Log("Waiting for Echo to accept connections")
+	conex.Logf(t, "echo", "Waiting for Echo to accept connections")
 
 	err := c.Wait(Port, EchoUpWaitTime)
 	if err != nil {
@@ -47,7 +47,7 @@ func Box(t testing.TB, reverse bool) (echo.Echo, conex.Container) {
 		t.Fatal("Echo failed to start:", err)
 	}
 
-	t.Log("Echo is now accepting connections")
+	conex.Logf(t, "echo", "Echo is now accepting connections")
 
 	addr := fmt.Sprintf("http://%s:%s", c.Address(), Port)
 
